@@ -14,9 +14,10 @@ function round() {
   $(divSelector).addClass("target");
   $(divSelector).text(hits);
   // TODO: помечать target текущим номером
-  firstHitTime = getTimestamp();
   // FIXME: тут надо определять при первом клике firstHitTime
-
+ if (hits === 1) {
+    firstHitTime = getTimestamp();
+  }
   if (hits === maxHits) {
     endGame();
   }
